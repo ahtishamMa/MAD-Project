@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bckground"
+    tools:context=".OTP_Activity">
+
+    <RelativeLayout
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/circuler_img"
+        android:backgroundTint="#E1DEDE"
+        app:layout_constraintBottom_toTopOf="@+id/imgPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413">
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:text="1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/circuler_img"
+        android:backgroundTint="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/imgPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413">
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/circuler_img"
+        android:backgroundTint="#E1DEDE"
+        app:layout_constraintBottom_toTopOf="@+id/imgPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413">
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/pass_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258"
+        tools:layout_editor_absoluteX="-16dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP sent to your phone number"
+        android:textSize="20sp"
+        android:id="@+id/tvText"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:fontFamily="@font/margarine"
+        app:layout_constraintTop_toBottomOf="@+id/imgPhone"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"/>
+
+    <EditText
+        android:id="@+id/etOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OTP"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText"/>
+
+
+
+    <Button
+        android:id="@+id/btnVerifyOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:layout_marginTop="@dimen/margin_start_end"
+        android:text="Verify OTP"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        app:layout_constraintTop_toBottomOf="@+id/etOTP"
+        tools:layout_editor_absoluteX="20dp" />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_start_end"
+        android:id="@+id/ProgressBarOTP"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerifyOTP"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
