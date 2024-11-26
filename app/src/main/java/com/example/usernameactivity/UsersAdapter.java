@@ -58,11 +58,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
          edit.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
              @Override
              public void onClick(DialogInterface dialog, int which) {
-              String uniqueKey = getRef(holder.getAdapterPosition()).getKey();
+
                  FirebaseDatabase.getInstance()
                          .getReference()
                          .child("usernames")
-                         .child(uniqueKey)
                          .removeValue()
                          .addOnSuccessListener(new OnSuccessListener<Void>() {
                              @Override
